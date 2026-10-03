@@ -36,7 +36,7 @@ ls -a
 date -d @1286536308
 ```
 
-![Unix timestamp converted to 2010](images/squid_date.png)
+![Unix timestamp converted to 2010](squid_date.png)
 
 *Ref 1: The Squid access log was located and a Unix timestamp was converted to determine the year.*
 
@@ -52,7 +52,7 @@ awk '{print $2}' squid_access.log | sort -n | head -1
 
 The fastest request took **5 milliseconds**.
 
-![Fastest request result](images/squid_fastest_millisecond.png)
+![Fastest request result](sqid_fastest%20millisecond.png)
 
 *Ref 2: The minimum request duration in the log was 5 milliseconds.*
 
@@ -68,7 +68,7 @@ awk '{print $2}' squid_access.log | sort -n | tail -1
 
 The longest request took **41,762 milliseconds**.
 
-![Longest request result](images/squid_longest_millisecond.png)
+![Longest request result](squid_slowest%20milli.png)
 
 *Ref 3: The maximum request duration in the log was 41,762 milliseconds.*
 
@@ -84,7 +84,7 @@ awk '{print $3}' squid_access.log | sort -u | wc -l
 
 The proxy log contained **4 unique client IP addresses**.
 
-![Unique IP address count](images/squid_unique_ips.png)
+![Unique IP address count](squid_how%20many%20IP%20.png)
 
 *Ref 4: The Squid log contained traffic from four different client IP addresses.*
 
@@ -100,7 +100,7 @@ grep -c ' GET ' squid_access.log
 
 The log contained **35 GET requests**.
 
-![GET request count](images/squid_get_requests.png)
+![GET request count](squid_how%20many%20get.png)
 
 *Ref 5: The Squid log contained 35 GET requests.*
 
@@ -128,6 +128,12 @@ The antivirus update URL found in the log was:
 http://liveupdate.symantecliveupdate.com/streaming/norton%202009%20streaming%20virus%20definitions_1.0_symalllanguages_livetri.zip
 ```
 
-![Squid log showing Symantec and Norton update traffic](images/squid_access_log.png)
+![Squid log showing Symantec and Norton update traffic](squid_acces_Log.png)
 
 *Ref 6: The log shows Norton/Symantec LiveUpdate traffic and the antivirus update download URL.*
+
+### Full Log File
+
+The complete Squid proxy log used for this analysis is available here:
+
+[**View the full `squid_access.log` file**](squid_access.log)
